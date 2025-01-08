@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Studio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f3f3f3, #ffffff);
+            color: #333;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #111;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+        .hero {
+            background: url('photography.jpeg') no-repeat center center;
+            background-size: cover;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+        }
+
+        .about {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .see-more {
+            text-align: center;
+            padding: 40px;
+            background: #f9f9f9;
+        }
+
+        .see-more h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .see-more a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .see-more a:hover {
+            background-color: #444;
+        }
+
+        .testimonials {
+            padding: 40px;
+            background: #eaeaea;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonials p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #555;
+            font-style: italic;
+        }
+
+        footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media Queries for Responsiveness */
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about h2 {
+                font-size: 1.5rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                padding: 10px;
+            }
+
+            .see-more h2 {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                padding: 10px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 18px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .about h2 {
+                font-size: 1.2rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .see-more h2 {
+                font-size: 1.2rem;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to [Your Photo Studio Name]
+    </header>
+    
+    <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Capture Your Moments</h1>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>At [Your Photo Studio Name], we specialize in creating timeless memories. With a professional team and cutting-edge equipment, we ensure that every click tells a story worth cherishing forever.</p>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <img src="Portrait.jpeg" alt="Portrait Photography">
+        <img src="Wedding.jpeg" alt="Wedding Photography">
+        <img src="landscape.jpeg" alt="Landscape Photography">
+        <img src="Studio.jpeg" alt="Studio Photography">
+    </section>
+
+    <section class="see-more">
+        <h2>See More of Our Work</h2>
+        <a href="https://photos.app.goo.gl/MhmRbhgTu1GG1Ass7" target="_blank" rel="noopener noreferrer">Explore Gallery</a>
+    </section>
+    
+    
+    
+
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p>"The team at [Your Photo Studio Name] is absolutely amazing! They captured our special moments perfectly."</p>
+        <p>"Highly professional and talented photographers. The results exceeded our expectations!"</p>
+    </section>
+
+    <footer id="contact">
+        <p>Contact us at: yourstudio@example.com | +123 456 7890</p>
+        <p>&copy; 2025 [Your Photo Studio Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
